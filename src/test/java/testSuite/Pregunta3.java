@@ -7,7 +7,7 @@ import java.util.Date;
 
 public class Pregunta3 extends TestBase{
     @Test
-    public void CrearUsuario() throws InterruptedException {
+    public void respuesta() throws InterruptedException {
         String name = "Samuel Matias Escobar Bejarano";
         String email = "samueb8@gmail.com";
         String password = "1234";
