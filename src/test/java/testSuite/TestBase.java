@@ -8,13 +8,10 @@ import session.Session;
 public class TestBase {
     MenuSection menuSection = new MenuSection();
     MainPage mainPage = new MainPage();
-    LoginSection loginSection = new LoginSection();
 
     LeftSection leftSection = new LeftSection();
 
     CenterSection centerSection = new CenterSection();
-
-    ProfileDialog profileDialog = new ProfileDialog();
 
     RegisterSection registerSection = new RegisterSection();
 
