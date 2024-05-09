@@ -1,4 +1,4 @@
-package peloteo.pages_peloteo;
+package pages_peloteo;
 
 public class UserPage {
 }

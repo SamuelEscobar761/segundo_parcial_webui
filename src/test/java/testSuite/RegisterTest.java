@@ -1,21 +1,29 @@
-package peloteo.testSuite;
+package testSuite;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import peloteo.testSuite.TestBase;
 
 import java.util.Date;
 
-public class RegisterTest extends TestBase {
+public class RegisterTest extends TestBasePeloteo {
     @Test
     public void respuesta() throws InterruptedException {
-        String name = "Samuel Matias Escobar Bejarano";
-        String email = "samueb8@gmail.com";
-        String password = "1234";
-        String nameProject = new Date().getTime()+"UPB";
+        String name = getRandomString(6);
+        String lastanme = getRandomString(6);
+        String email = getRandomString(8) + "8@gmail.com";
+        String password = getRandomString(8);
+        String phone = "77587417";
+        String searchButtonText = "Buscar";
+        loginPage.registerButton.click();
+        registerPage.nameTextBox.clearSetText(name);
+        registerPage.lastnameTextBox.clearSetText(lastanme);
+        registerPage.emailTextBox.clearSetText(email);
+        registerPage.passwordTextBox.clearSetText(password);
+        registerPage.phoneTextBox.clearSetText(phone);
+        registerPage.registerButton.click();
         Thread.sleep(1000);
-        Assertions.assertEquals(nameProject,mainPage.searchButton.getText(),
-                "ERROR! El project no fue creado");
+        Assertions.assertEquals(searchButtonText, mainPage.searchButton.getText(),
+                "ERROR! No se registro la cuenta correctamente");
     }
 
 }
